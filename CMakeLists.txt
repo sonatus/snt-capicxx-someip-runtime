@@ -139,7 +139,7 @@ file (GLOB CommonAPI-SomeIP_SRC "src/CommonAPI/SomeIP/*.cpp")
 list (SORT CommonAPI-SomeIP_SRC)
 
 # CommonAPI
-add_library (CommonAPI-SomeIP SHARED ${CommonAPI-SomeIP_SRC})
+add_library (CommonAPI-SomeIP STATIC ${CommonAPI-SomeIP_SRC})
 set_target_properties (CommonAPI-SomeIP PROPERTIES VERSION ${COMPONENT_VERSION} SOVERSION ${COMPONENT_VERSION})
 target_link_libraries (CommonAPI-SomeIP CommonAPI ${VSOMEIP_LIBRARIES})
 
