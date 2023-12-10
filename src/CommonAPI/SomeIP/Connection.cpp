@@ -589,6 +589,7 @@ Message Connection::sendMessageWithReplyAndBlock(
 
     std::cv_status waitStatus = std::cv_status::no_timeout;
 
+    COMMONAPI_INFO("timeout: ", _info->timeout_);
 
     std::chrono::steady_clock::time_point elapsed(
             std::chrono::steady_clock::now()
